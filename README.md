@@ -9,6 +9,37 @@ A 16-bit Counter, Capture and Compare peripheral with the following features:
 - A 16 bit timer with a 16-bit prescaler for measuring the time between events.
 - A synchronizer and a configurable Glitch filter.
 
+## The Interface
+
+![Diagram](./docs/AUCOHL_CCC16.svg "Diagram")
+
+### Parmeters
+
+| Generic name | Type | Value | Description |
+| ------------ | ---- | ----- | ----------- |
+| NSS          |      | 2     | Number of stages of the input synchronizer  |
+
+### Ports
+
+| Port name       | Direction | Type        | Description |
+| --------------- | --------- | ----------- | ----------- |
+| clk             | input     | wire        |             |
+| rst_n           | input     | wire        |             |
+| prescaler       | input     | wire [15:0] |             |
+| gf_len          | input     | wire [ 3:0] |             |
+| gf_en           | input     | wire        |             |
+| cntr_en         | input     | wire        |             |
+| cntr_clr        | input     | wire        |             |
+| tmr_en          | input     | wire        |             |
+| cntr_event      | input     | wire [ 1:0] |             |
+| cntr_cmp        | input     | wire [15:0] |             |
+| cap_start_event | input     | wire [ 1:0] |             |
+| cap_stop_event  | input     | wire [ 1:0] |             |
+| cntr_match      | output    | wire        |             |
+| cap_done        | output    | wire        |             |
+| capture         | output    | [15:0]      |             |
+| in              | input     | wire        | The input, connect to an input I/O pad |
+
 ## Registers
 
 |Name|Offset|Reset Value|Access Mode|Description|
