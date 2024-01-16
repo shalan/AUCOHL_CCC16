@@ -57,6 +57,8 @@ The port `ext_in` must be connected to an input I/O pad.
 
 > **_NOTE:_** `TB_APB_SLAVE_CONN is a convenient macro provided by [IP_Utilities](https://github.com/shalan/IP_Utilities).
 
+## The Programming Interface
+
 ### Registers
 
 |Name|Offset|Reset Value|Access Mode|Description|
