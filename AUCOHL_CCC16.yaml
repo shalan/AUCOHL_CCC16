@@ -30,37 +30,64 @@ info:
   analog_supply_voltage: n/a
 
 parameters:
- - name: NSS
-   default: 2
+- name: NSS
+  default: 2
+  description: The input synchronizer number of stages
 
 # Remove the clock, reset and external interface ports from the following list
 ports:
- - name: prescaler
-   width: 16
- - name: gf_len
-   width: 4
- - name: gf_en
-   width: 1
- - name: cntr_en
-   width: 1
- - name: cntr_clr
-   width: 1
- - name: tmr_en
-   width: 1  
- - name: cntr_event
-   width: 2
- - name: cntr_cmp
-   width: 16
- - name: cap_start_event
-   width: 2
- - name: cap_stop_event
-   width: 2
- - name: cntr_match
-   width: 1
- - name: cap_done
-   width: 1
- - name: capture
-   width: 16
+- name: prescaler
+  width: 16
+  direction: input
+  description: 
+- name: gf_len
+  width: 4
+  direction: input
+  description: 
+- name: gf_en
+  width: 1
+  direction: input
+  description: 
+- name: cntr_en
+  width: 1
+  direction: input
+  description: 
+- name: cntr_clr
+  width: 1
+  direction: input
+  description: 
+- name: tmr_en
+  width: 1
+  direction: input
+  description: 
+- name: cntr_event
+  width: 2
+  direction: input
+  description: 
+- name: cntr_cmp
+  width: 16
+  direction: input
+  description: 
+- name: cap_start_event
+  width: 2
+  direction: input
+  description: 
+- name: cap_stop_event
+  width: 2
+  direction: input
+  description: 
+- name: cntr_match
+  width: 1
+  direction: output
+  description: 
+- name: cap_done
+  width: 1
+  direction: output
+  description: 
+- name: capture
+  width: 16
+  direction: output
+  description: 
 
 clock:
  name: clk
@@ -74,6 +101,7 @@ external_interface:
   port: in
   direction: input
   width: 1
+  description: 
 
 registers:
 - name: PR
